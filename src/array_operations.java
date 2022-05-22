@@ -7,8 +7,15 @@ public class array_operations
         int[] array = {5, 6, 7, 8, 8, 20, 12, 15, 5, 6, 7, 8};
         System.out.println("AVERAGE of array " + Arrays.toString(array) + " is " + find_average(array));
         System.out.println("Frequency of elements in array " + " is: " + find_frequency(array));
+        System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array)));
     }
-private static Hashtable<Integer, Integer> find_frequency(int [] input_array)
+
+    private static int[] get_sorted_array(int[] input_array)
+        {
+         Arrays.sort(input_array);
+         return input_array;
+        }
+    private static Hashtable<Integer, Integer> find_frequency(int [] input_array)
 {
     Hashtable<Integer, Integer> frequency_dict = new Hashtable<Integer, Integer> ();
 
