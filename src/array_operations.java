@@ -7,13 +7,28 @@ public class array_operations
         int[] array = {5, 6, 7, 8, 8, 20, 12, 15, 5, 6, 7, 8};
         System.out.println("AVERAGE of array " + Arrays.toString(array) + " is " + find_average(array));
         System.out.println("Frequency of elements in array " + " is: " + find_frequency(array));
-        System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array)));
+        System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
+        // System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
     }
 
-    private static int[] get_sorted_array(int[] input_array)
+    private static int[] get_sorted_array(int[] input_array, String option)
         {
-         Arrays.sort(input_array);
-         return input_array;
+            if (Objects.equals(option, "ascending") || Objects.equals(option, "asc"))
+            {
+                Arrays.sort(input_array);
+            }
+            else if (Objects.equals(option, "dec") || Objects.equals(option, "descending"))
+            {
+                List.of(input_array).sort(Collections.reverseOrder());
+            }
+            else
+            {
+                System.out.println("""
+                        Apparently there is a typo in the sorting method you entered\s
+                        Try:
+                        'dec' or 'asc'\s""");
+            }
+            return input_array;
         }
     private static Hashtable<Integer, Integer> find_frequency(int [] input_array)
 {
