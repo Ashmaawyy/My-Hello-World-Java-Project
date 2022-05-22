@@ -8,10 +8,9 @@ public class array_operations
         System.out.println("AVERAGE of array " + Arrays.toString(array) + " is " + find_average(array));
         System.out.println("Frequency of elements in array " + " is: " + find_frequency(array));
     }
-private static Hashtable<Integer, Integer> find_frequency(int [] input_array)
+private static <string> Hashtable<Integer, Integer> find_frequency(int [] input_array)
 {
-    Hashtable<Integer, Integer> frequency_dict = new Hashtable <Integer, Integer> ();
-    Set<Integer> frequencies = new HashSet<>();
+    Hashtable<Integer, Integer> frequency_dict = new Hashtable<Integer, Integer> ();
 
     for (int j : input_array) {
         frequency_dict.put(j, Collections.frequency(List.of(input_array), j));
