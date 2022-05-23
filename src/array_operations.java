@@ -6,7 +6,7 @@ public class array_operations
 {
     public static void main(String[] args)
     {
-        int[] array = {5, 6, 7, 8, 8, 20, 12, 15, 5, 6, 7, 8};
+        int[] array = {5, 6, 7, 8, 8, 20, 12, 15, 5, 6, 7, 8, 20, 12, 15};
         System.out.println("AVERAGE of array is: " + find_average(array));
         System.out.println("Frequency of elements in array " + " is: " + find_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
@@ -51,12 +51,15 @@ public class array_operations
         for(int i = 0; i < input_array.length; i++)
         {
             int count = 1;
-            for (int j = i + 1; j < input_array.length; j++) {
-                if (input_array[i] == input_array[j]) {
+            for (int j = i + 1; j < input_array.length; j++)
+            {
+                if (input_array[i] == input_array[j])
+                {
                     count++;
                     frequencies_array[j] = visited;
                 }
-                if (frequencies_array[i] != visited) {
+                if (frequencies_array[i] != visited)
+                {
                     frequencies_array[i] = count;
                 }
 
