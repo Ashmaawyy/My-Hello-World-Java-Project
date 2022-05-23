@@ -8,7 +8,7 @@ public class array_operations
         System.out.println("AVERAGE of array " + Arrays.toString(array) + " is " + find_average(array));
         System.out.println("Frequency of elements in array " + " is: " + find_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
-        // System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
+        System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
     }
 
     private static int[] get_sorted_array(int[] input_array, String option)
@@ -17,9 +17,17 @@ public class array_operations
             {
                 Arrays.sort(input_array);
             }
-            else if (Objects.equals(option, "dec") || Objects.equals(option, "descending"))
-            {
-                List.of(input_array).sort(Collections.reverseOrder());
+            else if (Objects.equals(option, "dec") || Objects.equals(option, "descending")) {
+                int temp;
+                for (int i = 0; i < input_array.length; i++) {
+                    for (int j = i + 1; j < input_array.length; j++) {
+                        if (input_array[i] < input_array[j]) {
+                            temp = input_array[i];
+                            input_array[i] = input_array[j];
+                            input_array[j] = temp;
+                        }
+                    }
+                }
             }
             else
             {
