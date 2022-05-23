@@ -47,6 +47,7 @@ public class array_operations
     private static Hashtable<Integer, Integer> find_frequency(int [] input_array)
     {
         int [] frequencies_array = new int[input_array.length];
+        get_sorted_array(input_array, "asc");
         int visited = -1;
         for(int i = 0; i < input_array.length; i++)
         {
