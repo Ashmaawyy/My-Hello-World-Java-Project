@@ -11,6 +11,7 @@ public class array_operations
         System.out.println("Frequency of elements in array " + " is: " + get_items_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
         System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
+        System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "acs")));
     }
 
     private static int[] get_sorted_array(int[] input_array, String option)
@@ -18,6 +19,7 @@ public class array_operations
             if (Objects.equals(option, "ascending") || Objects.equals(option, "asc"))
             {
                 Arrays.sort(input_array);
+                return input_array;
             }
             else if (Objects.equals(option, "dec") || Objects.equals(option, "descending"))
             {
@@ -34,12 +36,13 @@ public class array_operations
                         }
                     }
                 }
+                return input_array;
             }
             else
             {
                 System.out.println("Apparently there is a typo in the sorting method you entered\nTry:\n'dec' or 'asc'");
+                return null;
             }
-            return input_array;
     }
     private static Hashtable<Integer, Integer> get_items_frequency(int [] input_array)
     {
