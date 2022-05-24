@@ -1,13 +1,11 @@
 import java.util.*;
 
-import static java.lang.Math.abs;
-
 public class array_operations
 {
     public static void main(String[] args)
     {
         int[] array = {5, 6, 7, 8, 8, 20, 12, 15, 5, 6, 7, 8, 20, 12, 15};
-        System.out.println("AVERAGE of array is: " + find_average(array));
+        System.out.println("AVERAGE of array is: " + get_items_average(array));
         System.out.println("Frequency of elements in array " + " is: " + get_items_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
         System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
@@ -82,7 +80,7 @@ public class array_operations
         }
         return frequency_array;
     }
-    private static double find_average(int[] values)
+    private static double get_items_average(int[] values)
     {
         double result = 0;
         for (int value : values)
