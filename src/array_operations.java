@@ -37,10 +37,7 @@ public class array_operations
             }
             else
             {
-                System.out.println("""
-                        Apparently there is a typo in the sorting method you entered\s
-                        Try:
-                        'dec' or 'asc'\s""");
+                System.out.println("Apparently there is a typo in the sorting method you entered\nTry:\n'dec' or 'asc'");
             }
             return input_array;
     }
