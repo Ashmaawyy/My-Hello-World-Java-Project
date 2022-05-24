@@ -15,10 +15,10 @@ public class StringArrayOperations
     {
         String[] array = new String[10000];
         Random random_string = new Random();
+
         for (int i = 0; i < array.length; i++)
-        {
             array[i] = String.valueOf(random_string.nextInt());
-        }
+
         System.out.println("Frequency of elements in array " + " is: " + get_items_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
         System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));

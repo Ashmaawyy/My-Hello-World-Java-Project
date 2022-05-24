@@ -15,10 +15,10 @@ public class IntegerArrayOperations
     {
         int[] array = new int[10000];
         Random random_int = new Random();
+
         for (int i = 0 ;i < array.length; i++)
-        {
             array[i] = random_int.nextInt();
-        }
+
         System.out.println("AVERAGE of array is: " + get_items_average(array));
         System.out.println("Frequency of elements in array " + " is: " + get_items_frequency(array));
         System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
