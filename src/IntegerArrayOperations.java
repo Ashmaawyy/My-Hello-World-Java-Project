@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class array_operations
+public class IntegerArrayOperations
 {
     public static void main(String[] args)
     {
