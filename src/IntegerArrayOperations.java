@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.Hashtable;
 import java.util.Objects;
-import java.util.Random;
 
 public class IntegerArrayOperations
 {
@@ -9,21 +8,22 @@ public class IntegerArrayOperations
     {
             if (Objects.equals(sorting_option, "ascending") || Objects.equals(sorting_option, "asc"))
             {
+                System.out.println("Sorted array from A-Z:\n");
                 Arrays.sort(input_array);
-                return input_array;
             }
             else if (Objects.equals(sorting_option, "dec") || Objects.equals(sorting_option, "descending"))
             {
-                return get_descending_order(input_array);
+                System.out.println("Sorted array from Z-A:\n");
+                get_descending_order(input_array);
             }
             else
             {
-                System.out.println("Apparently there is a typo in the sorting method you entered\nTry:\n'dec' or 'asc'");
-                return null;
+                System.out.println("Apparently there is a typo in the sorting method you entered\ntry:\n'dec' or 'asc'");
             }
+            return input_array;
     }
 
-    static int[] get_descending_order(int[] input_array)
+    static void get_descending_order(int[] input_array)
     {
         int temp;
         for (int i = 0; i < input_array.length; i++)
@@ -39,7 +39,6 @@ public class IntegerArrayOperations
             }
         }
 
-        return input_array;
     }
 
     static Hashtable<Integer, Integer> get_items_frequency(int [] input_array)
