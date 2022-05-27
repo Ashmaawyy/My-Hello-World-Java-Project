@@ -55,11 +55,11 @@ public class StringArrayOperations
     {
         if (Objects.equals(sorting_option, "ascending") || Objects.equals(sorting_option, "asc"))
         {
-            System.out.println("Sorted array from A-Z:\n");
+            System.out.println("Sorted array from A-Z:");
             Arrays.sort(input_array);
         } else if (Objects.equals(sorting_option, "dec") || Objects.equals(sorting_option, "descending"))
         {
-            System.out.println("Sorted array from Z-A:\n");
+            System.out.println("Sorted array from Z-A:");
             Arrays.sort(input_array, Collections.reverseOrder());
         }
         else
