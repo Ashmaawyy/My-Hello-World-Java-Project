@@ -19,6 +19,7 @@ public class IntegerArrayOperations
             else
             {
                 System.out.println("Apparently there is a typo in the sorting method you entered\ntry:\n'dec' or 'asc'");
+                return null;
             }
             return input_array;
     }
