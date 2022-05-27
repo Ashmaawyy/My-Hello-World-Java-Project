@@ -6,26 +6,7 @@ import java.util.Random;
 
 public class StringArrayOperations
 {
-    public static void main(String[] args)
-    {
-     test();
-    }
-
-    private static void test()
-    {
-        String[] array = new String[10000];
-        Random random_string = new Random();
-
-        for (int i = 0; i < array.length; i++)
-            array[i] = String.valueOf(random_string.nextInt());
-
-        System.out.println("Frequency of elements in array " + " is: " + get_items_frequency(array));
-        System.out.println("Sorted Array From A-Z: " + Arrays.toString(get_sorted_array(array, "asc")));
-        System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "dec")));
-        System.out.println("Sorted Array From Z-A: " + Arrays.toString(get_sorted_array(array, "acs")));
-    }
-
-    private static Hashtable<String, Integer> get_items_frequency(String[] input_array)
+    static Hashtable<String, Integer> get_items_frequency(String[] input_array)
     {
         get_sorted_array(input_array, "asc");
         int[] frequency_array = get_frequency_array(input_array);
@@ -33,7 +14,7 @@ public class StringArrayOperations
         return get_frequency_dict(input_array, frequency_array);
     }
 
-    private static Hashtable <String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
+    static Hashtable <String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
     {
         Hashtable <String, Integer> frequency_dict = new Hashtable <String, Integer>();
         int visited = -1;
@@ -46,7 +27,7 @@ public class StringArrayOperations
         return frequency_dict;
     }
 
-    private static int [] get_frequency_array(String[] input_array)
+    static int [] get_frequency_array(String[] input_array)
     {
         int [] frequency_array = new int[input_array.length];
         int visited = -1;
@@ -71,7 +52,7 @@ public class StringArrayOperations
         return frequency_array;
     }
 
-    private static String[] get_sorted_array(String[] input_array, String sorting_option)
+    static String[] get_sorted_array(String[] input_array, String sorting_option)
     {
         if (Objects.equals(sorting_option, "ascending") || Objects.equals(sorting_option, "asc"))
         {
@@ -81,7 +62,8 @@ public class StringArrayOperations
         else if (Objects.equals(sorting_option, "dec") || Objects.equals(sorting_option, "descending"))
         {
             return get_descending_order(input_array);
-        } else
+        }
+        else
         {
             System.out.println("Apparently there is a typo in the sorting method you entered\nTry:\n'dec' or 'asc'");
             return null;
@@ -89,7 +71,7 @@ public class StringArrayOperations
     }
 
 
-    private static String[] get_descending_order(String[] input_array)
+    static String[] get_descending_order(String[] input_array)
     {
         Arrays.sort(input_array, Collections.reverseOrder());
         return input_array;
