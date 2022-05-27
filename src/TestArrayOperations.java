@@ -7,10 +7,10 @@ public class TestArrayOperations
     {
         System.out.println("Integer array operations test:" + "\n");
         integer_array_operations_test();
-        System.out.println("-----------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------------");
         System.out.println("String array operations test:" + "\n");
         string_array_operations_test();
-        System.out.println("-----------------------------------------");
+        System.out.println("-----------------------------------------------------------------------------------------");
     }
     private static void integer_array_operations_test()
     {
@@ -28,7 +28,10 @@ public class TestArrayOperations
     }
     private static void string_array_operations_test()
     {
-        // todo
+        /*
+        todo
+        Generate random names as strings
+        */
         String[] array = new String[10000];
         Random random_name = new Random();
 
