@@ -2,7 +2,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Hashtable;
 import java.util.Objects;
-import java.util.Random;
 
 public class StringArrayOperations
 {
@@ -14,9 +13,9 @@ public class StringArrayOperations
         return get_frequency_dict(input_array, frequency_array);
     }
 
-    static Hashtable <String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
+    static Hashtable<String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
     {
-        Hashtable <String, Integer> frequency_dict = new Hashtable <String, Integer>();
+        Hashtable<String, Integer> frequency_dict = new Hashtable<String, Integer>();
         int visited = -1;
         for (int i = 0; i < input_array.length; i++)
         {
@@ -27,12 +26,12 @@ public class StringArrayOperations
         return frequency_dict;
     }
 
-    static int [] get_frequency_array(String[] input_array)
+    static int[] get_frequency_array(String[] input_array)
     {
-        int [] frequency_array = new int[input_array.length];
+        int[] frequency_array = new int[input_array.length];
         int visited = -1;
 
-        for(int i = 0; i < input_array.length; i++)
+        for (int i = 0; i < input_array.length; i++)
         {
             int count = 1;
 
@@ -56,24 +55,18 @@ public class StringArrayOperations
     {
         if (Objects.equals(sorting_option, "ascending") || Objects.equals(sorting_option, "asc"))
         {
+            System.out.println("Sorted array from A-Z:\n");
             Arrays.sort(input_array);
-            return input_array;
-        }
-        else if (Objects.equals(sorting_option, "dec") || Objects.equals(sorting_option, "descending"))
+        } else if (Objects.equals(sorting_option, "dec") || Objects.equals(sorting_option, "descending"))
         {
-            return get_descending_order(input_array);
+            System.out.println("Sorted array from Z-A:\n");
+            Arrays.sort(input_array, Collections.reverseOrder());
         }
         else
         {
-            System.out.println("Apparently there is a typo in the sorting method you entered\nTry:\n'dec' or 'asc'");
+            System.out.println("Apparently there is a typo in the sorting method you entered\ntry:\n'dec' or 'asc'");
             return null;
         }
-    }
-
-
-    static String[] get_descending_order(String[] input_array)
-    {
-        Arrays.sort(input_array, Collections.reverseOrder());
         return input_array;
     }
 }
