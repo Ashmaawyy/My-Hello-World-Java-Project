@@ -13,7 +13,7 @@ public class StringArrayOperations
         return get_frequency_dict(input_array, frequency_array);
     }
 
-    static Hashtable<String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
+    static Hashtable <String, Integer> get_frequency_dict(String[] input_array, int[] frequency_array)
     {
         Hashtable<String, Integer> frequency_dict = new Hashtable<String, Integer>();
         int visited = -1;

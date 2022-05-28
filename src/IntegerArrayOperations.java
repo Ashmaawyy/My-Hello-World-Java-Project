@@ -42,7 +42,7 @@ public class IntegerArrayOperations
 
     }
 
-    static Hashtable<Integer, Integer> get_items_frequency(int [] input_array)
+    static Hashtable <Integer, Integer> get_items_frequency(int[] input_array)
     {
         get_sorted_array(input_array, "asc");
         int[] frequency_array = get_frequency_array(input_array);
